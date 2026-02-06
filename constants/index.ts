@@ -244,7 +244,7 @@ export const ProjectArray: Project[] = [
       "Hello Store Backend is a backend service for a Hello Store",
     image:
       "https://pern-store-logic.vercel.app/favicon.ico",
-    category: "Fullstack",
+    category: "Backend",
     technologies: ["Express", "Neon serverless", "Stripe", "Arcjet", "PostgreSQL"],
     link: "https://pern-store-logic.vercel.app",
   },
