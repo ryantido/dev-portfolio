@@ -35,6 +35,7 @@ export interface GoalListProps {
 export interface Project {
   id: string;
   title: string;
+  repoName: string;
   description: string;
   image: string;
   category: Category;
@@ -42,7 +43,7 @@ export interface Project {
   link: string;
 }
 
-export interface Article extends Omit<Project, "link"> {
+export interface Article extends Omit<Project, "link" | "repoName"> {
   date: Date;
   timeToRead: number;
 }
