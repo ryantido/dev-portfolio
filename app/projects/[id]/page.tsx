@@ -49,7 +49,7 @@ export default async function ProjectDetails({
             {project?.description}
           </p>
 
-          <ProjectCta liveLink={project?.link!} repoName={project?.title!} />
+          <ProjectCta liveLink={project?.link!} repoName={project?.repoName!} category={project?.category!} />
         </section>
         <figure className="relative aspect-video overflow-hidden rounded-lg order-1 lg:order-2">
           <Fallback image={project?.image!} title={project?.title!} />

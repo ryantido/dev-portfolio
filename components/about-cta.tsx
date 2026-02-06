@@ -31,16 +31,19 @@ export const AboutCta = () => {
 export const ProjectCta = ({
   liveLink,
   repoName,
+  category,
 }: {
   liveLink: string;
   repoName: string;
+  category: string;
 }) => {
   return (
     <nav className="flex flex-col sm:flex-row items-center w-full md:w-fit gap-3 pt-4">
       <Button
         size="lg"
-        className="h-11 text-base rounded-xl lg:rounded-lg text-white font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition max-md:w-full max-w-11/12"
+        className="h-11 text-base rounded-xl lg:rounded-lg text-white font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition max-md:w-full max-w-11/12 disabled:cursor-not-allowed"
         onClick={() => window.open(liveLink, "_blank")}
+        disabled={category === "Mobile" || category === "Backend"}
       >
         View Live Project
         <FaExternalLinkAlt className="size-3" />

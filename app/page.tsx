@@ -48,7 +48,7 @@ export default function Home() {
               </span>
               <div>
                 <p className="text-sm font-bold text-[#111318] dark:text-white">
-                  {new Date().getFullYear() - 2022}+ Years Experience
+                  {new Date().getFullYear() - 2023}+ Years Experience
                 </p>
                 <p className="text-xs text-[#637588] dark:text-[#93adc8]">
                   Delivering high-quality code
@@ -110,7 +110,7 @@ export default function Home() {
             </p>
 
             <ul className="flex flex-wrap gap-2 justify-center lg:justify-start">
-              {TechStack.map(({ label, icon: Icon }) => (
+              {TechStack.slice(0, 5).map(({ label, icon: Icon }) => (
                 <li
                   key={label}
                   className="flex h-9 items-center gap-2 rounded-lg bg-[#e5e7eb] dark:bg-[#282e39] px-3"
