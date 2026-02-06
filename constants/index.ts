@@ -123,7 +123,7 @@ export const ProjectArray: Project[] = [
     description:
       "Une plateforme de vente en ligne complète avec gestion de panier et paiements sécurisés.",
     image:
-      "https://travelsplaner.vercel.app/favicon.ico",
+      "https://travelsplaner.vercel.app/favicon",
     category: "Fullstack",
     technologies: ["Next.js", "Prisma", "Tailwind CSS", "LocationIQ", "NextAuth", "PostgreSQL", "Typescript"],
     link: "https://travelsplaner.vercel.app",
@@ -135,7 +135,7 @@ export const ProjectArray: Project[] = [
     description:
       "CV Pro Builder est un générateur de CV professionnel en ligne, conçu par Ryan Tido pour créer des CV lisibles, modernes et prêts à être exportés en PDF.",
     image:
-      "https://cv-builder-rust-alpha.vercel.app/favicon.ico",
+      "https://cv-builder-rust-alpha.vercel.app/favicon",
     category: "Fullstack",
     technologies: ["Next.js", "Tailwind CSS", "Puppeeter", "Typescript"],
     link: "https://cv-builder-rust-alpha.vercel.app",
@@ -171,7 +171,7 @@ export const ProjectArray: Project[] = [
     description:
       "A stunning Nike landing page",
     image:
-      "https://rnike.vercel.app/favicon.ico",
+      "https://rnike.vercel.app/favicon",
     category: "Frontend",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     link: "https://rnike.vercel.app",
@@ -207,7 +207,7 @@ export const ProjectArray: Project[] = [
     description:
       "Consultez la météo en temps réel, les prévisions horaires et à 5 jours pour votre ville. Ajoutez des favoris et explorez les conditions détaillées (vent, humidité, pression, lever/coucher du soleil).",
     image:
-      "https://weather-plum-mu.vercel.app/favicon.ico",
+      "https://weather-plum-mu.vercel.app/favicon",
     category: "Frontend",
     technologies: ["Next.js", "Tailwind CSS", "Typescript", "OpenWeatherMap", "Recharts", "date-fns"],
     link: "https://weather-plum-mu.vercel.app/i",
@@ -219,7 +219,7 @@ export const ProjectArray: Project[] = [
     description:
       "Discover amazing products at Hello Store - Your one-stop shop for all your needs. Fast shipping, great prices, and excellent customer service.",
     image:
-      "https://hello-store-eta.vercel.app/favicon.ico",
+      "https://hello-store-eta.vercel.app/favicon",
     category: "Frontend",
     technologies: ["Next.js", "Tailwind CSS", "Typescript", "PostgreSQL", "Prisma"],
     link: "https://hello-store-eta.vercel.app",
