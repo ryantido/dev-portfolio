@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Ryan Tido",
   },
   description:
-    "Full Stack Developer specializing in scalable backend systems and intuitive UIs. Portfolio, projects, skills, and contact.",
+    "Hello ! I’m Ryan Tido, a Full Stack Developer who designs and builds scalable, reliable web applications with Next.js, React, TypeScript and Node.js, focused on clean architecture and UX.",
   keywords: [
     "Ryan Tido",
     "Full Stack Developer",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: "/",
     title: "Ryan Tido – Full Stack Developer",
     description:
-      "Full Stack Developer specializing in scalable backend systems and intuitive UIs.",
+      "Hello ! I’m Ryan Tido, a Full Stack Developer who designs and builds scalable, reliable web applications with Next.js, React, TypeScript and Node.js, focused on clean architecture and UX.",
     siteName: "Ryan Tido",
     images: [
       {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ryan Tido – Full Stack Developer",
     description:
-      "Full Stack Developer specializing in scalable backend systems and intuitive UIs.",
+      "Hello ! I’m Ryan Tido, a Full Stack Developer who designs and builds scalable, reliable web applications with Next.js, React, TypeScript and Node.js, focused on clean architecture and UX.",
     images: ["/api/og"],
     creator: "@ryantido34",
   },
@@ -96,6 +96,37 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+      <Script
+          id="schema-person"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Ryan Tido",
+              "url": "https://ryantido.vercel.app",
+              "jobTitle": "Full Stack Developer",
+              "knowsAbout": [
+                "Next.js",
+                "React",
+                "React Native",
+                "TypeScript",
+                "Node.js",
+                "Express.js",
+                "Nest.js",
+                "Web Development",
+                "Full Stack Development",                
+              ],
+              "sameAs": [
+                "https://github.com/ryantido",
+                "https://ryantido.vercel.app",
+                "https://linkedin.com/in/ryan-tido-29450633a",
+              ]
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${spaceGrotesk.className} ${outfit.variable} ${sora.variable} antialiased dark`}
       >
