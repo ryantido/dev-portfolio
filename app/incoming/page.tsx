@@ -145,13 +145,13 @@ export default function IncomingSkills() {
                 </Item>
                 <h3 className="font-bold text-xl my-2.5 flex items-center justify-between">
                   Mastering Next.js 16{" "}
-                  <span className="text-sm text-primary">35%</span>
+                  <span className="text-sm text-primary">82%</span>
                 </h3>
                 <p className="text-sm md:text-base text-muted-foreground max-w-xl">
                   Learning the ins and outs of Next.js 16, including its new
                   features and best practices.
                 </p>
-                <SkillsRange range={35} className="h-2" />
+                <SkillsRange range={82} className="h-2" />
               </CardContent>
             </Card>
             <Card>

@@ -37,23 +37,39 @@ export default function Resume() {
             ))}
           </div>
           <div className="space-y-3">
-            <Button size="lg" className="w-full h-12">
+            <Button
+              size="lg"
+              className="w-full h-12"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/Ryan Tido.pdf";
+                link.download = "Ryan Tido-Resume.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               <MdOutlineFileDownload className="size-6" />
               <span className="flex flex-col gap-px items-start">
                 <span className="font-semibold font-outfit text-base">
                   Download Resume
                 </span>
                 <span className="text-[10px] text-blue-50/65 font-sora">
-                  PDF Format (2.4 MB)
+                  PDF Format (198.3 KB)
                 </span>
               </span>
             </Button>
             <div className="max-md:hidden flex flex-col md:flex-row gap-3 *:flex-1 *:bg-background *:border *:border-border *:has-[svg]:size-10 *:hover:bg-muted-foreground/10">
-              <Button size="lg">
+              <Button size="lg" onClick={() => window.open("/Ryan Tido.pdf", "_blank")}>
                 <BiSolidPrinter className="size-4" />
                 Print
               </Button>
-              <Button size="lg">
+              <Button
+                size="lg"
+                onClick={() => {
+                  window.open("mailto:ryantido34@gmail.com", "_blank");
+                }}
+              >
                 <MdEmail className="size-4" />
                 Email
               </Button>
@@ -65,7 +81,7 @@ export default function Resume() {
             </h4>
 
             <ul className="flex flex-wrap gap-2">
-              {TechStack.map(({ label, icon: Icon }) => (
+              {TechStack.slice(0, 8).map(({ label, icon: Icon }) => (
                 <li
                   className="flex h-9 items-center gap-2 rounded-md bg-background border border-border px-3"
                   key={label}
