@@ -12,12 +12,12 @@ export default function CVPreview({ cv }: Props) {
     <Card className="w-full h-full shadow-xl border-muted/40">
       <div className="h-[650px] overflow-y-auto">
         <CardContent className="p-8 space-y-8">
-          {isFallback && (
+          {/* {isFallback && (
             <div className="text-xs text-muted-foreground bg-muted/40 px-3 py-2 rounded-md">
               This is a preview template. Add your CV information to personalize
               it.
             </div>
-          )}
+          )} */}
 
           <div>
             <h1 className="text-3xl font-bold tracking-tight">
