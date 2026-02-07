@@ -121,7 +121,7 @@ export const ProjectArray: Project[] = [
     title: "Velora",
     repoName: "travel-planner",
     description:
-      "Une plateforme de vente en ligne complète avec gestion de panier et paiements sécurisés.",
+      "Plan, document, and share your journeys effortlessly with Velora – a beautifully designed travel app.",
     image:
       "https://travelsplaner.vercel.app/favicon",
     category: "Fullstack",
