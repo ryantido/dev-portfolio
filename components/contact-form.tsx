@@ -39,23 +39,55 @@ export const ContactForm = () => {
   });
   const submitting = form.formState.isSubmitting;
   async function onSubmit(data: ContactSchema) {
-    await new Promise((resolve) => setTimeout(resolve, 4000));
-    toast("You submitted the following values:", {
-      description: (
-        <pre className="bg-code text-code-foreground mt-2 w-[320px] overflow-x-auto rounded-md p-4">
-          <code>{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-      position: "bottom-right",
-      classNames: {
-        content: "flex flex-col gap-2",
-      },
-      style: {
-        "--border-radius": "calc(var(--radius)  + 4px)",
-      } as React.CSSProperties,
-      dismissible: true,
-    });
-    form.reset();
+    
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL!}/api/v1/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      const object = await response.json();
+
+      if (!response.ok)
+        toast.error("An error occured while attemting to send mail", {
+          description: object?.message,
+          position: "bottom-right",
+          classNames: {
+            content: "flex flex-col gap-2",
+          },
+          style: {
+            "--border-radius": "calc(var(--radius)  + 4px)",
+          } as React.CSSProperties,
+          dismissible: true,
+        });
+
+      toast("Operation complete successfully!", {
+        description: object?.message,
+        position: "bottom-right",
+        classNames: {
+          content: "flex flex-col gap-2",
+        },
+        style: {
+          "--border-radius": "calc(var(--radius)  + 4px)",
+        } as React.CSSProperties,
+        dismissible: true,
+      });
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      toast.error("An unexpected error occurred", {
+        description:
+          error instanceof Error
+            ? error?.message
+            : (error as any) || "Unknown error",
+      });
+    }
   }
   return (
     <Card className="w-full bg-[#111318]/90 sm:max-w-lg mx-auto gap-4">
